@@ -10,10 +10,10 @@ public abstract class GameObject {
 	protected int velY;
 	protected GameObjectId id;
 
-	protected GameObject(int posX, int posY/*, GameObjectId id*/) {
+	protected GameObject(int posX, int posY, GameObjectId id) {
 		this.posX = posX;
 		this.posY = posY;
-		/*this.id = id;*/
+		this.id = id;
 	}
 	
 	public abstract void tick();

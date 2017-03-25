@@ -18,8 +18,9 @@ public class Game extends Canvas implements Runnable {
 	
 	public Game() {
 		handler = new Handler();
-		handler.addObjectToList(new Player(100, 100/*, GameObjectId.Player*/));
-		handler.addObjectToList(new Player(300, 300/*, GameObjectId.Player*/));
+		handler.addObjectToList(new Player(100, 100, GameObjectId.Player));
+		handler.addObjectToList(new Player(300, 300, GameObjectId.Player2));
+		this.addKeyListener(new KeyInput(handler));
 		new Window("Java game window", WIDTH, HEIGHT, this);
 		
 	}
@@ -96,8 +97,6 @@ public class Game extends Canvas implements Runnable {
 		bs.show();
 		
 	}
-	
-	
 	
 	public static void main(String args[]) {
 		new Game();
